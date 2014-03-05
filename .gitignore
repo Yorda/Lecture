@@ -1,0 +1,7 @@
+*.swp
+*.sh
+*.class
+*.html
+*.htm
+*.php
+target/
