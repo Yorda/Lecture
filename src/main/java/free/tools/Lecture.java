@@ -13,6 +13,13 @@ import org.jsoup.nodes.Element;
 
 public class Lecture {
 
+    public String sayHello(){
+        return "Hello";
+    }
+
+    public Lecture(){
+    }
+
 	public String $version = "1.7.1-without-multi-page";
 
 	public boolean $convertLinksToFootnotes = false;
@@ -176,7 +183,7 @@ public class Lecture {
 	}
 	
 	public static void main(String[] a) throws Exception {
-		File f = new File("D:/tmp/readability_test.htm");
+		File f = new File("/opt/projects/java/workspace/Lecture/readability_test.htm");
 		FileReader reader = new FileReader(f);
 		char[] chars = new char[(int) f.length()];
 		reader.read(chars);
@@ -186,7 +193,7 @@ public class Lecture {
 		reader.close();
 		
 		// Write test result
-		FileWriter fw = new FileWriter("D:/tmp/readability_modified.htm", true);
+		FileWriter fw = new FileWriter("/opt/projects/java/workspace/Lecture/readability_modified.htm", true);
 		fw.write(lire.getDocument().html());
 		fw.close();
 
